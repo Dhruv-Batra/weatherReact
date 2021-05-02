@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h2>Charlottesville Weather</h2>
+        <h2>Weather</h2>
         <div class="grid-container">
           <img src={logo} className="App-logo grid-item" alt="logo"/>
           <img src={logo} className="App-logo grid-item" alt="logo"/>
