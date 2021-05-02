@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 
 function App() {
 
+  const [showCurrent, setShowCurrent] = useState(false)
   const [showHourly, setShowHourly] = useState(false)
   
   return (
@@ -24,22 +25,39 @@ function App() {
       <div class="App-body">
       <br></br>
       
-      {showHourly ? <div><Button
-          onClick={() => {setShowHourly(true)}}
+      {showCurrent ? <div><Button
+          onClick={() => {setShowCurrent(false)}}
           variant="contained"
           color="primary"
       >
         Current Weather
       </Button><Current/></div> : 
       <Button
-          onClick={() => {setShowHourly(true)}}
+          onClick={() => {setShowCurrent(true)}}
           variant="contained"
           color="primary"
       >
         Current Weather
       </Button>}
 
-      <Hourly/>
+      <br></br><br></br>
+
+      {showHourly ? <div><Button
+          onClick={() => {setShowHourly(false)}}
+          variant="contained"
+          color="primary"
+      >
+        Hourly Forecast
+      </Button><Hourly/></div> : 
+      <Button
+          onClick={() => {setShowHourly(true)}}
+          variant="contained"
+          color="primary"
+      >
+        Hourly Forecast
+      </Button>}
+
+    
       
       </div>  
     </div>

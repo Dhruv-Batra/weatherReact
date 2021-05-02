@@ -3,13 +3,16 @@ const API_KEY = process.env.REACT_APP_api_key;
 
 export default function Hourly(w){
 
-    const [weather, setWeather] = useState(null);
+    const [hour, setHour] = useState(null);
+
 
     useEffect(() => {
-        const url = new URL("https://api.openweathermap.org/data/2.5/weather");
+        const url = new URL("https://api.openweathermap.org/data/2.5/onecall");
         url.searchParams.append("appid", API_KEY);
-        url.searchParams.append("zip", 22904);
+        url.searchParams.append("lat", "33.44");
+        url.searchParams.append("lon", "-94.04");
         url.searchParams.append("units", "imperial");
+        url.searchParams.append("exclude", "current,minutely,daily,alerts");
         fetch(url)
         .then((resp) => {
             return resp.json();
@@ -18,21 +21,27 @@ export default function Hourly(w){
             // also important to check html error codes
             // 200 means no errors
             if (obj.cod === 200) {
-            setWeather(obj);
+            setHour(obj);
             } else {
-            setWeather(false);
+            setHour(false);
             }
         });
     }, []);
 
 
+
     //<pre>{JSON.stringify(weather, undefined, 4)}</pre>
 
-    return(weather&&(
+    /*return(hour&&(
         <div>
-            <p><strong>INSERT DAILY HERE</strong></p>
+            <pre>{JSON.stringify(hour, undefined, 4)}</pre>
         </div>
-    ));
+    ));*/
+
+    return(
+        <div>
+            <p>INSERT HOURLY FORECASE HERE</p>
+        </div>
+    );
 
 };
-
