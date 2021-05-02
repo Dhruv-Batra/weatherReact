@@ -1,6 +1,6 @@
 <p align="center">
   <img width="400" src="/Documents/Launch/weather/weather/src/screenshot.png">
-</p>
+</p>  
 # References  
 https://stackoverflow.com/questions/63366140/how-to-call-a-component-onclick-of-a-button-in-a-functional-component-with-mater  
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator  
