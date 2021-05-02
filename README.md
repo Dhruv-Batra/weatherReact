@@ -1,4 +1,4 @@
-![Screenshot](/Documents/Launch/weather/weather/src/screenshot.png | width=100)
+<img align="center" width="200" src="/Documents/Launch/weather/weather/src/screenshot.png">
 
 # References  
 https://stackoverflow.com/questions/63366140/how-to-call-a-component-onclick-of-a-button-in-a-functional-component-with-mater  
