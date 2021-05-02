@@ -34,8 +34,12 @@ export default function Input(w){
 
     return(lon&&lat&&(
         <div>
-            <TextField id="standard-basic" label="Longitude" defaultValue={lon}/>
-            <TextField id="standard-basic" label="Latitude" defaultValue={lat}/>
+            <TextField id="standard-basic" label="Latitude" defaultValue={lat}
+                onchange={e=>{this.setLat(e.target.value)}}
+            />
+            <TextField id="standard-basic" label="Longitude" defaultValue={lon}
+                onchange={e=>{this.setLon(e.target.value)}}
+            />
             <br></br><br></br>
       
             {showCurrent ? <div><Button
@@ -64,7 +68,10 @@ export default function Input(w){
                 color="primary"
             >
                 Hourly Forecast
-            </Button><Hourly/></div> : 
+            </Button><Hourly
+                long={lon}
+                lati={lat}
+            /></div> : 
             <Button
                 onClick={() => {setShowHourly(true)}}
                 variant="contained"
