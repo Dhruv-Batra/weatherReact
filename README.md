@@ -1,7 +1,7 @@
 <p align="center">
   <img width="400" src="/Documents/Launch/weather/weather/src/screenshot.png">
 </p>  
-# References:<br/>  
+References:<br/>  
 https://stackoverflow.com/questions/63366140/how-to-call-a-component-onclick-of-a-button-in-a-functional-component-with-mater  <br/>
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator  <br/>
 https://www.pluralsight.com/guides/how-to-use-geolocation-call-in-reactjs  <br/>
