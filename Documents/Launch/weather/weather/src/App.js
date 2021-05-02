@@ -1,14 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Hourly from './Hourly';
-import Current from './Current';
-import Button from "@material-ui/core/Button";
+import Input from './Input';
+
 import React, { useEffect, useState } from "react";
 
 function App() {
-
-  const [showCurrent, setShowCurrent] = useState(false)
-  const [showHourly, setShowHourly] = useState(false)
   
   return (
     <div className="App">
@@ -24,41 +20,9 @@ function App() {
       </header>
       <div class="App-body">
       <br></br>
-      
-      {showCurrent ? <div><Button
-          onClick={() => {setShowCurrent(false)}}
-          variant="contained"
-          color="primary"
-      >
-        Current Weather
-      </Button><Current/></div> : 
-      <Button
-          onClick={() => {setShowCurrent(true)}}
-          variant="contained"
-          color="primary"
-      >
-        Current Weather
-      </Button>}
 
-      <br></br><br></br>
+      <Input/>
 
-      {showHourly ? <div><Button
-          onClick={() => {setShowHourly(false)}}
-          variant="contained"
-          color="primary"
-      >
-        Hourly Forecast
-      </Button><Hourly/></div> : 
-      <Button
-          onClick={() => {setShowHourly(true)}}
-          variant="contained"
-          color="primary"
-      >
-        Hourly Forecast
-      </Button>}
-
-    
-      
       </div>  
     </div>
   );

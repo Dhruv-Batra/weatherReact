@@ -41,6 +41,7 @@ export default function Hourly(w){
     return(
         <div>
             <p>INSERT HOURLY FORECASE HERE</p>
+            <pre>{JSON.stringify(hour, undefined, 4)}</pre>
         </div>
     );
 

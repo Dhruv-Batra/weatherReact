@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 const API_KEY = process.env.REACT_APP_api_key;
 
-export default function Hourly(w){
+export default function Current(long,lati){
 
     const [weather, setWeather] = useState(null);
 
@@ -25,15 +25,17 @@ export default function Hourly(w){
         });
     }, []);
 
-
     //<pre>{JSON.stringify(weather, undefined, 4)}</pre>
 
     return(weather&&(
         <div>
-            <p>Current Temperature: {weather.main.temp}</p>
-            <p>Feels Like: {weather.main.feels_like}</p>
-            <p>Daily Low: {weather.main.temp_min}</p>
-            <p>Daily High: {weather.main.temp_max}</p>
+            <div>
+                <p>Current Temperature: {weather.main.temp}</p>
+                <p>Feels Like: {weather.main.feels_like}</p>
+                <img src={"https://openweathermap.org/img/w/"+weather.weather[0].icon+".png"}></img>
+                <p>Daily Low: {weather.main.temp_min}</p>
+                <p>Daily High: {weather.main.temp_max}</p>
+            </div>
         </div>
     ));
 
