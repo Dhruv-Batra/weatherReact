@@ -35,10 +35,10 @@ export default function Input(w){
     return(lon&&lat&&(
         <div>
             <TextField id="standard-basic" label="Latitude" defaultValue={lat}
-                onchange={e=>{this.setLog(e.target.value)}}
+                onChange={e=>{setLat(e.target.value)}}
             />
             <TextField id="standard-basic" label="Longitude" defaultValue={lon}
-                onchange={e=>{this.setLon(e.target.value)}}
+                onChange={e=>{setLon(e.target.value)}}
             />
             <br></br><br></br>
       
