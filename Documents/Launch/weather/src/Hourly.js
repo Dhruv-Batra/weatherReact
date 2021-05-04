@@ -20,11 +20,7 @@ export default function Hourly({long,lati}){
         .then((obj) => {
             // also important to check html error codes
             // 200 means no errors
-            if (obj.cod === 200) {
             setHour(obj);
-            } else {
-            setHour(false);
-            }
         });
     }, []);
 
@@ -41,7 +37,6 @@ export default function Hourly({long,lati}){
 
     return(
         <div>
-            <p>INSERT HOURLY FORECASE HERE</p>
             <pre>{JSON.stringify(hour, undefined, 4)}</pre>
         </div>
     );
